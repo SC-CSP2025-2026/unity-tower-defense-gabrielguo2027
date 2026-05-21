@@ -5,7 +5,7 @@ public class Waypoint : MonoBehaviour
 {
     [field: SerializeField]
     public Waypoint Next {get; private set; }
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
         if(Next == null)
         {
