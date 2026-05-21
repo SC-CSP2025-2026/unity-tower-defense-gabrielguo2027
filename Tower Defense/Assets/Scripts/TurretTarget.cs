@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class TurretTarget : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [field: SerializeField]
+    public AtkRange AoE {get; private set;}
+    [field: SerializeField]
+    public GameObject Model {get; private set;}
     void Start()
     {
         
@@ -11,6 +14,10 @@ public class TurretTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(AoE.Targets.Count !=0)
+        {
+            Model.transform.LookAt(AoE.Targets[0].transform);
+        }
         
     }
 }

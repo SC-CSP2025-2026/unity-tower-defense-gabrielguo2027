@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7651760228705194700}
   - component: {fileID: 6111548101214352202}
   - component: {fileID: 5682847430748161412}
+  - component: {fileID: 555233741327308478}
+  - component: {fileID: 9140288731900414285}
   m_Layer: 0
   m_Name: Atk Range
   m_TagString: Untagged
@@ -108,6 +110,46 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &555233741327308478
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280843700786613170}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &9140288731900414285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280843700786613170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eb847d8302d849d3bd4ac52e1bc9e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Targets>k__BackingField: []
 --- !u!1 &5136385596235266742
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401411f00c5a84b749eb4cd8cd57c209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <AoE>k__BackingField: {fileID: 9140288731900414285}
+  <Model>k__BackingField: {fileID: 5136385596235266742}
 --- !u!1 &6902999606540626575
 GameObject:
   m_ObjectHideFlags: 0
