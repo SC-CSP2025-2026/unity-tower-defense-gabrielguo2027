@@ -13390,6 +13390,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4164340313122650425, guid: f18c2147833724321aef82ed4d875377, type: 3}
   m_PrefabInstance: {fileID: 1571110595}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1571376940 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4112777818530405206, guid: 3082a668935e645489a586c1d7b97326, type: 3}
+  m_PrefabInstance: {fileID: 5004461773921806276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1571376943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571376940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edec743e7c4bd484d8a09c40b1e2004b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <rotatingSpeed>k__BackingField: 90
 --- !u!1001 &1571779691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19417,6 +19435,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1561960950725175307, guid: 3082a668935e645489a586c1d7b97326, type: 3}
+      propertyPath: <Speed>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4112777818530405206, guid: 3082a668935e645489a586c1d7b97326, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -19464,7 +19486,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4112777818530405206, guid: 3082a668935e645489a586c1d7b97326, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1571376943}
   m_SourcePrefab: {fileID: 100100000, guid: 3082a668935e645489a586c1d7b97326, type: 3}
 --- !u!4 &5499150208449501789 stripped
 Transform:

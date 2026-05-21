@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyRotation : MonoBehaviour
 {
     [field: SerializeField]
-    public float rotatingSpeed {get; private set;} = 1f;
+    public float rotatingSpeed {get; private set;} = 90f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,4 +18,5 @@ public class EnemyRotation : MonoBehaviour
 }
 //why is it 1f
 //what is Vector3
+//Why don't we do the transform.rotate += new ()??
 
