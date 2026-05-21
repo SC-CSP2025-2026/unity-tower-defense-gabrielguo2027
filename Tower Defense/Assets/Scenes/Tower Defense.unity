@@ -8515,6 +8515,7 @@ MonoBehaviour:
   <Enemy>k__BackingField: {fileID: 1561960950725175307, guid: 3082a668935e645489a586c1d7b97326, type: 3}
   <StartingWaypoint>k__BackingField: {fileID: 1800584217}
   <Delay>k__BackingField: 0.2
+  <MaxSpawn>k__BackingField: 20
 --- !u!1001 &1082309483
 PrefabInstance:
   m_ObjectHideFlags: 0

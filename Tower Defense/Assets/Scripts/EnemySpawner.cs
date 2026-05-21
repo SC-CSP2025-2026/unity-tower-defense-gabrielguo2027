@@ -16,9 +16,18 @@ public class EnemySpawner : MonoBehaviour
     public float MaxSpawn {get; private set;} = 10f;
     void Start()
     {
-        InvokeRepeating(nameof(Spawn), Delay , Delay);
 
         
+    }
+
+    void OnDisable()
+    {
+        CancelInvoke();
+    }
+
+    void OnEnable()
+    {
+        InvokeRepeating(nameof(Spawn), Delay , Delay);
     }
 
     // Update is called once per frame
@@ -37,4 +46,6 @@ public class EnemySpawner : MonoBehaviour
         newEnemy.Target = StartingWaypoint;
         MaxSpawn--;
     }
+
+    
 }
