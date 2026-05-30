@@ -247,6 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8137957619529394370}
   - component: {fileID: -4229582586061369460}
+  - component: {fileID: 7405210449001674393}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -285,6 +286,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <AoE>k__BackingField: {fileID: 9140288731900414285}
   <Model>k__BackingField: {fileID: 5136385596235266742}
+--- !u!114 &7405210449001674393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6692850534845008481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffb290f11d6f440787ba020b5b27f472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <AoE>k__BackingField: {fileID: 9140288731900414285}
+  <ProjectilePrefab>k__BackingField: {fileID: 8567272825490809233, guid: 0612baab87fcb4a58873a11fa8a9c7ae, type: 3}
+  <CooldownTime>k__BackingField: 3
+  <IsCoolingDown>k__BackingField: 0
 --- !u!1 &6902999606540626575
 GameObject:
   m_ObjectHideFlags: 0
