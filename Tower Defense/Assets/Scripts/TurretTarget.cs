@@ -3,21 +3,16 @@ using UnityEngine;
 public class TurretTarget : MonoBehaviour
 {
     [field: SerializeField]
-    public AtkRange AoE {get; private set;}
-    [field: SerializeField]
-    public GameObject Model {get; private set;}
-    void Start()
-    {
-        
-    }
+    public AtkRange AoE { get; private set; }
 
-    // Update is called once per frame
+    [field: SerializeField]
+    public GameObject Model { get; private set; }
+
     void Update()
     {
-        if(AoE.Targets.Count !=0)
+        if (AoE.Targets.Count != 0)
         {
             Model.transform.LookAt(AoE.Targets[0].transform);
         }
-        
     }
 }

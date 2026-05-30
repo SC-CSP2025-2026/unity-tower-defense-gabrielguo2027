@@ -4,15 +4,34 @@ using System.Collections.Generic;
 public class AtkRange : MonoBehaviour
 {
     [field: SerializeField]
-    public List<Transform> Targets {get; private set;} = new();
+    public List<Health> Targets { get; private set; } = new();
 
     void OnTriggerEnter(Collider other)
     {
-        Targets.Add(other.transform);
+        Health health = other.GetComponentInParent<Health>();
+        if (health == null)
+        {
+            return;
+        }
+
+        Targets.Add(health);
+        health.OnDeath.AddListener(RemoveOnDeath);
     }
 
     void OnTriggerExit(Collider other)
     {
-        Targets.Remove(other.transform);
+        Health health = other.GetComponentInParent<Health>();
+        if (health == null)
+        {
+            return;
+        }
+
+        Targets.Remove(health);
+        health.OnDeath.RemoveListener(RemoveOnDeath);
+    }
+
+    void RemoveOnDeath(Health targetHealth)
+    {
+        Targets.Remove(targetHealth);
     }
 }

@@ -35,7 +35,7 @@ public class TurretAttack : MonoBehaviour
     {
         Projectile projectile = Instantiate(ProjectilePrefab);
         projectile.transform.position = transform.position;
-        projectile.Target = AoE.Targets[0];
+        projectile.Target = AoE.Targets[0].transform;
     }
 
     void ResetCooldown()
