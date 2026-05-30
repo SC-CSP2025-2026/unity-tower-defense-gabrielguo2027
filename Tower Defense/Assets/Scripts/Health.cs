@@ -1,10 +1,20 @@
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class Health : MonoBehaviour
 {
     [field: SerializeField]
-    public float BaseHealth { get; private set;} = 2f;
-    [field: SerializeField]
-    public float Damage{get; private set;}
+    public float BaseHealth { get; private set; } = 2f;
 
+    [field: SerializeField]
+    public float Damage { get; private set; }
+
+    public void ApplyHit(Projectile projectile)
+    {
+        Damage += projectile.Damage;
+
+        if (Damage >= BaseHealth)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

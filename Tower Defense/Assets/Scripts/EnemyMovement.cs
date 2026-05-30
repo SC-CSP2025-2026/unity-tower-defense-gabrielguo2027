@@ -9,6 +9,11 @@ public class EnemyMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (Target == null)
+        {
+            return;
+        }
+
         transform.position = Target.transform.position;
         
     }
@@ -16,6 +21,11 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Target == null)
+        {
+            return;
+        }
+
         transform.position = Vector3.MoveTowards(transform.position, Target.transform.position, Speed * Time.deltaTime);
         float distance = Vector3.Distance(transform.position, Target.transform.position);
         if (distance <= Mathf.Epsilon)
