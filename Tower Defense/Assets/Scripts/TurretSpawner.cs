@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TurretSpawner : MonoBehaviour
 {
+    private const int TurretCost = 50;
+
     [field: SerializeField]
     public GameObject TurretPrefab {get;private set;}
 
@@ -36,13 +38,30 @@ public class TurretSpawner : MonoBehaviour
 
     public void SpawnTurret(TileController tileController)
     {
-        if (tileController.IsOccupied)
+        if (!CanSpawn(tileController))
         {
             return;
         }
+
         GameObject newTurret = Instantiate(TurretPrefab);
         newTurret.transform.position = tileController.transform.position;
         tileController.MarkOccupied();
+        Controller.Gold -= TurretCost;
+    }
+
+    public bool CanSpawn(TileController tileController)
+    {
+        if (tileController.IsOccupied)
+        {
+            return false;
+        }
+
+        if (Controller == null || Controller.Gold < TurretCost)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     public void StopListeningToTilesIn(GameObject grid)

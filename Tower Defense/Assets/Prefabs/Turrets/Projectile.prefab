@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Speed>k__BackingField: 18
-  <Damage>k__BackingField: 1
+  <Damage>k__BackingField: 5
   <Target>k__BackingField: {fileID: 0}
 --- !u!1 &4212310074309290151
 GameObject:
