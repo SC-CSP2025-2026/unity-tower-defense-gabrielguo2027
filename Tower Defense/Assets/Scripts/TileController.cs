@@ -29,4 +29,9 @@ public class TileController : MonoBehaviour
     {
         OnCursorClicked.Invoke(this);
     }
+
+    public void MarkOccupied()
+    {
+        IsOccupied = true;
+    }
 }
