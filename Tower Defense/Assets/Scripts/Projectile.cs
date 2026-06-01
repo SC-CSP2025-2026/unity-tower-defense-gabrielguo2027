@@ -3,7 +3,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [field: SerializeField]
-    public float Speed { get; private set; } = 2f;
+    public float Speed { get; private set; } = 18f;
 
     [field: SerializeField]
     public float Damage { get; private set; } = 1f;

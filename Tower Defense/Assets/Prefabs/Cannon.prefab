@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: -4229582586061369460}
   - component: {fileID: 7405210449001674393}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <AoE>k__BackingField: {fileID: 9140288731900414285}
   <ProjectilePrefab>k__BackingField: {fileID: 8567272825490809233, guid: 0612baab87fcb4a58873a11fa8a9c7ae, type: 3}
-  <CooldownTime>k__BackingField: 3
+  <CooldownTime>k__BackingField: 2
   <IsCoolingDown>k__BackingField: 0
 --- !u!1 &6902999606540626575
 GameObject:

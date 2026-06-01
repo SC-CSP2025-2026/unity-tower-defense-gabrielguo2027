@@ -45,6 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ab61a01a4474968ad1e66e6f2cfbd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <Speed>k__BackingField: 18
+  <Damage>k__BackingField: 1
+  <Target>k__BackingField: {fileID: 0}
 --- !u!1 &4212310074309290151
 GameObject:
   m_ObjectHideFlags: 0
