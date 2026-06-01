@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7634292480584687883}
   - component: {fileID: 1835086988109831641}
   - component: {fileID: 6960010832723099162}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9111009769678601297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Snow Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077526887736511265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: River Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 463177830539994279}
   - component: {fileID: 8173832550406750995}
   - component: {fileID: 4525259468338754016}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

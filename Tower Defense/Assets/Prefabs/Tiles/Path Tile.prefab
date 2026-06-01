@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3631391976239717669}
   - component: {fileID: 1939439373453202104}
   - component: {fileID: 4483033169356791292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1687052975660712122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Path Tile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
