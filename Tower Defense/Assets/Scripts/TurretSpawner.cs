@@ -8,6 +8,9 @@ public class TurretSpawner : MonoBehaviour
     [field: SerializeField]
     public GameObject TargetGrid { get; private set; }
 
+    [field: SerializeField]
+    public PlayerController Controller { get; private set; }
+
     void OnEnable()
     {
         ListenToTilesIn(TargetGrid);

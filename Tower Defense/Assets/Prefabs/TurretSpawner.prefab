@@ -46,3 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TurretPrefab>k__BackingField: {fileID: 6692850534845008481, guid: ef70632862029490a858cc88e8a9eae9, type: 3}
   <TargetGrid>k__BackingField: {fileID: 0}
+  <Controller>k__BackingField: {fileID: 0}
