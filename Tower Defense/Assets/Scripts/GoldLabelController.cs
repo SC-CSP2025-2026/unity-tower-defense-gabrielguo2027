@@ -18,14 +18,4 @@ public class GoldLabelController : MonoBehaviour
 
         Label.text = $"Gold: {Controller.Gold}";
     }
-
-    void OnGUI()
-    {
-        if (Controller == null || Label != null)
-        {
-            return;
-        }
-
-        GUI.Label(new Rect(20, 20, 120, 30), $"Gold: {Controller.Gold}");
-    }
 }
