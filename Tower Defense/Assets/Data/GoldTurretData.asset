@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GoldTurretData
   m_EditorClassIdentifier:
   <Name>k__BackingField: Gold Turret
-  <Cost>k__BackingField: 50
+  <Cost>k__BackingField: 80
   <Prefab>k__BackingField: {fileID: 2611959766977924587, guid: 76805ee35bb36452cb1d006f1287f6c4, type: 3}

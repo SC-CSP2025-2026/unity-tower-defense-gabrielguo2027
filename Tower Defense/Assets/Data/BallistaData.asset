@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BallistaData
   m_EditorClassIdentifier:
   <Name>k__BackingField: Ballista
-  <Cost>k__BackingField: 50
+  <Cost>k__BackingField: 70
   <Prefab>k__BackingField: {fileID: 6099484278235594890, guid: 9f0e7f464bb224e188be1ef69f16b6f7, type: 3}
