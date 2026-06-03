@@ -91,7 +91,7 @@ public class TurretSpawner : MonoBehaviour
         }
         else
         {
-            DisplayInfo($"Build Turret: {TurretCost}");
+            DisplayInfo($"Build: {TurretCost}");
         }
     }
 
