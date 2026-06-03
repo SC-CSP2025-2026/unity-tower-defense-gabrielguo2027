@@ -1,11 +1,9 @@
 using UnityEngine;
 
-public class TurretSpawner : MonoBehaviour
+public class BuildingSpawner : MonoBehaviour
 {
-    private const int TurretCost = 50;
-
     [field: SerializeField]
-    public GameObject TurretPrefab { get; set; }
+    public BuildingData Selected { get; set; }
 
     [field: SerializeField]
     public GameObject TargetGrid { get; private set; }
@@ -36,27 +34,27 @@ public class TurretSpawner : MonoBehaviour
         {
             tile.OnCursorEnter.AddListener(ShowInfo);
             tile.OnCursorExit.AddListener(ShowSelectTileInfo);
-            tile.OnCursorClicked.AddListener(SpawnTurret);
+            tile.OnCursorClicked.AddListener(SpawnBuilding);
         }
     }
 
-    public void SpawnTurret(TileController tileController)
+    public void SpawnBuilding(TileController tileController)
     {
         if (!CanSpawn(tileController))
         {
             return;
         }
 
-        GameObject newTurret = Instantiate(TurretPrefab, Controller.transform);
-        newTurret.transform.position = tileController.transform.position;
+        GameObject newBuilding = Instantiate(Selected.Prefab, Controller.transform);
+        newBuilding.transform.position = tileController.transform.position;
         tileController.MarkOccupied();
-        Controller.Gold -= TurretCost;
+        Controller.Gold -= Selected.Cost;
         gameObject.SetActive(false);
     }
 
     public bool CanSpawn(TileController tileController)
     {
-        if (tileController == null)
+        if (tileController == null || Selected == null || Selected.Prefab == null)
         {
             return false;
         }
@@ -89,9 +87,9 @@ public class TurretSpawner : MonoBehaviour
         {
             DisplayInfo("Not Enough Gold");
         }
-        else
+        else if (Selected != null)
         {
-            DisplayInfo($"Build: {TurretCost}");
+            DisplayInfo($"Build {Selected.Name}: {Selected.Cost}");
         }
     }
 
@@ -102,12 +100,19 @@ public class TurretSpawner : MonoBehaviour
 
     private void ShowBuildModeInfo()
     {
-        DisplayInfo(HasEnoughGold() ? "Select a Tile" : "Not Enough Gold");
+        if (Selected == null)
+        {
+            DisplayInfo("Click Build");
+        }
+        else
+        {
+            DisplayInfo(HasEnoughGold() ? "Select a Tile" : "Not Enough Gold");
+        }
     }
 
     private bool HasEnoughGold()
     {
-        return Controller != null && Controller.Gold >= TurretCost;
+        return Controller != null && Selected != null && Controller.Gold >= Selected.Cost;
     }
 
     private bool IsTileBlocked(TileController tileController)
@@ -134,7 +139,7 @@ public class TurretSpawner : MonoBehaviour
         {
             tile.OnCursorEnter.RemoveListener(ShowInfo);
             tile.OnCursorExit.RemoveListener(ShowSelectTileInfo);
-            tile.OnCursorClicked.RemoveListener(SpawnTurret);
+            tile.OnCursorClicked.RemoveListener(SpawnBuilding);
         }
     }
 }

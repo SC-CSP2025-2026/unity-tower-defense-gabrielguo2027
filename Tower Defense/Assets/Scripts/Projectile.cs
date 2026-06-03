@@ -9,6 +9,12 @@ public class Projectile : MonoBehaviour
     public float Damage { get; private set; } = 1f;
 
     [field: SerializeField]
+    public int GoldReward { get; private set; } = 0;
+
+    [field: SerializeField]
+    public PlayerController Controller { get; set; }
+
+    [field: SerializeField]
     public Transform Target { get; set; }
 
     void Start()
@@ -43,8 +49,6 @@ public class Projectile : MonoBehaviour
 
     void Hit()
     {
-        Debug.Log("Hit");
-
         Health health = Target.GetComponentInParent<Health>();
         if (health != null)
         {
@@ -52,5 +56,13 @@ public class Projectile : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    public void ApplyKillReward()
+    {
+        if (Controller != null)
+        {
+            Controller.Gold += GoldReward;
+        }
     }
 }

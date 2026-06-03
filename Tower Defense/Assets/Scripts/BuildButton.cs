@@ -7,10 +7,10 @@ public class BuildButton : MonoBehaviour
     public GameObject TileCursor { get; private set; }
 
     [field: SerializeField]
-    public GameObject TurretSpawner { get; private set; }
+    public GameObject BuildingSpawner { get; private set; }
 
     [field: SerializeField]
-    public GameObject BuildingPrefab { get; private set; }
+    public BuildingData Data { get; private set; }
 
     void Awake()
     {
@@ -29,15 +29,15 @@ public class BuildButton : MonoBehaviour
             TileCursor.SetActive(true);
         }
 
-        if (TurretSpawner != null)
+        if (BuildingSpawner != null)
         {
-            TurretSpawner spawner = TurretSpawner.GetComponent<TurretSpawner>();
-            if (spawner != null && BuildingPrefab != null)
+            BuildingSpawner spawner = BuildingSpawner.GetComponent<BuildingSpawner>();
+            if (spawner != null && Data != null)
             {
-                spawner.TurretPrefab = BuildingPrefab;
+                spawner.Selected = Data;
             }
 
-            TurretSpawner.SetActive(true);
+            BuildingSpawner.SetActive(true);
         }
     }
 }

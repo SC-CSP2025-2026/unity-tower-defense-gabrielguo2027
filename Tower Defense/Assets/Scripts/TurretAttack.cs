@@ -16,6 +16,11 @@ public class TurretAttack : MonoBehaviour
 
     void Update()
     {
+        if (AoE == null || ProjectilePrefab == null)
+        {
+            return;
+        }
+
         if (IsCoolingDown)
         {
             return;
@@ -36,6 +41,7 @@ public class TurretAttack : MonoBehaviour
         Projectile projectile = Instantiate(ProjectilePrefab);
         projectile.transform.position = transform.position;
         projectile.Target = AoE.Targets[0].transform;
+        projectile.Controller = GetComponentInParent<PlayerController>();
     }
 
     void ResetCooldown()

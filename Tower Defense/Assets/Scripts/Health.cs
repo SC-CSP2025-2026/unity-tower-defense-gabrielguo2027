@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
 
         if (Damage >= BaseHealth)
         {
+            projectile.ApplyKillReward();
             OnDeath.Invoke(this);
             Destroy(gameObject);
         }

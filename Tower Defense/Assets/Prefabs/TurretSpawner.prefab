@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1866310962}
   - component: {fileID: 1866310961}
   m_Layer: 0
-  m_Name: TurretSpawner
+  m_Name: BuildingSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5e4c2a412a4f3eb5d6c7780521f15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <TurretPrefab>k__BackingField: {fileID: 6692850534845008481, guid: ef70632862029490a858cc88e8a9eae9, type: 3}
+  <Selected>k__BackingField: {fileID: 11400000, guid: d8c3a37e964a4ccaa9370c5a751a0011, type: 2}
   <TargetGrid>k__BackingField: {fileID: 0}
   <Controller>k__BackingField: {fileID: 0}
